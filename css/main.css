@@ -1,5 +1,6 @@
 /* Reset and base styles  */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import "./fonts/gilroy/stylesheet.css";
 * {
   padding: 0px;
   margin: 0px;
@@ -110,5 +111,118 @@ legend {
 body {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
-  color: #1f1f1f;
+  color: rgb(31, 31, 31);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1750px;
+}
+
+.link {
+  color: rgb(17, 68, 85);
+  font-size: 20px;
+  font-weight: 800;
+  transition: border-bottom 0.15s ease-out;
+}
+.link:hover {
+  border-bottom: 1px solid rgb(17, 68, 85);
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  border: 1px solid rgb(17, 68, 85);
+  border-radius: 2px;
+  padding: 10px 24px;
+  padding-right: 72px;
+  color: rgb(17, 68, 85);
+  font-size: 20px;
+  font-weight: 800;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-image: url("./../img/buttons/arrow-black.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.btn:hover, .btn:focus {
+  background-color: rgb(17, 68, 85);
+  color: rgb(255, 255, 255);
+}
+.btn:hover::after, .btn:focus::after {
+  background-image: url("./../img/buttons/arrow-white.svg");
+}
+.btn--big {
+  padding: 14px 32px;
+  padding-right: 80px;
+  background-color: rgb(17, 68, 85);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 800;
+}
+.btn--big::after {
+  background-image: url("./../img/buttons/arrow-white.svg");
+}
+.btn--big:hover, .btn--big:focus {
+  background-color: rgb(234, 244, 246);
+  color: rgb(17, 68, 85);
+}
+.btn--big:hover::after, .btn--big:focus::after {
+  background-image: url("./../img/buttons/arrow-black.svg");
+}
+
+.header {
+  min-height: 100vh;
+  background-color: rgb(234, 244, 246);
+  background-image: url("./../img/header/bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header__top {
+  padding: 44px 0;
+  margin-bottom: 126px;
+}
+
+.header__content {
+  max-width: 1060px;
+}
+
+.header__title {
+  max-width: 734px;
+  font-weight: 800;
+  font-size: 80px;
+  color: rgb(17, 68, 85);
+  margin-bottom: 48px;
+}
+
+.header__text {
+  margin-bottom: 72px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 34px;
+  color: rgb(31, 31, 31);
+}
+.header__text p + p {
+  margin-top: 1em;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 118px;
+       column-gap: 118px;
 }/*# sourceMappingURL=main.css.map */

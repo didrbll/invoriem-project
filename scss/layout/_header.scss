@@ -1,0 +1,35 @@
+.header {
+  min-height: 100vh;
+  background-color: $color-header;
+  background-image: url("./../img/header/bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header__top {
+  padding: 44px 0;
+  margin-bottom: 126px;
+}
+
+.header__content {
+  max-width: 1060px;
+}
+
+.header__title {
+  max-width: 734px;
+  font-weight: $bold;
+  font-size: 80px;
+  color: $color-accent;
+  margin-bottom: 48px;
+}
+
+.header__text {
+  margin-bottom: 72px;
+  font-family: $font-accent;
+  font-size: 34px;
+  color: $color-main;
+
+  p + p {
+    margin-top: 1em;
+  }
+}

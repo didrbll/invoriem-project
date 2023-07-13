@@ -1,7 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import "./fonts/gilroy/stylesheet.css";
 
 body {
   font-family: $font-main;
-  font-weight: 500;
+  font-weight: $medium;
   color: $color-main;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1750px;
+}
+
+.link {
+  @include links($color-accent);
+  transition: border-bottom 0.15s ease-out;
+
+  &:hover {
+    border-bottom: 1px solid $color-accent;
+  }
 }

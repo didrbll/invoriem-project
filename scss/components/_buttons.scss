@@ -1,0 +1,55 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  border: 1px solid $color-accent;
+  border-radius: 2px;
+  padding: 10px 24px;
+  padding-right: 72px;
+  @include links($color-accent);
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url("./../img/buttons/arrow-black.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    color: $color-white;
+
+    &::after {
+      background-image: url("./../img/buttons/arrow-white.svg");
+    }
+  }
+
+  &--big {
+    padding: 14px 32px;
+    padding-right: 80px;
+    background-color: $color-accent;
+    @include links($color-white);
+
+    &::after {
+      background-image: url("./../img/buttons/arrow-white.svg");
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-header;
+      color: $color-accent;
+
+      &::after {
+        background-image: url("./../img/buttons/arrow-black.svg");
+      }
+    }
+  }
+}
