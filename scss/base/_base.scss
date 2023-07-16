@@ -13,6 +13,10 @@ body {
   max-width: 1750px;
 }
 
+.container-right {
+  padding-left: calc((100% - 1750px) / 2 + 15px);
+}
+
 .link {
   @include links($color-accent);
   transition: border-bottom 0.15s ease-out;
@@ -20,4 +24,14 @@ body {
   &:hover {
     border-bottom: 1px solid $color-accent;
   }
+}
+
+.title {
+  font-size: 80px;
+  font-weight: $bold;
+}
+
+.text {
+  font-size: 28px;
+  line-height: 1.57;
 }
