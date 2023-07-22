@@ -22,7 +22,7 @@ body {
   transition: border-bottom 0.15s ease-out;
 
   &:hover {
-    border-bottom: 1px solid $color-accent;
+    border-bottom: 2px solid $color-accent;
   }
 }
 
@@ -34,6 +34,7 @@ body {
 .text {
   font-size: 28px;
   line-height: 1.57;
+  color: $color-text;
 }
 
 .none {

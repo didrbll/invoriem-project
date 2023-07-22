@@ -21,14 +21,14 @@
   font-size: 80px;
   color: $color-accent;
   margin-bottom: 48px;
-  text-shadow: 2px 4px $color-shadow;
+  text-shadow: 2px 2px $color-shadow;
 }
 
 .header__text {
   margin-bottom: 72px;
   font-family: $font-accent;
   font-size: 34px;
-  color: $color-main;
+  color: $color-text;
 
   p + p {
     margin-top: 1em;

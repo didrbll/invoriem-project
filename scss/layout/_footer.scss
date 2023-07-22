@@ -1,0 +1,39 @@
+.footer {
+  padding: 162px 0 82px;
+  letter-spacing: 0.04em;
+  font-size: 20px;
+  line-height: 36px;
+  color: $color-text;
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__nav {
+  display: flex;
+  column-gap: 104px;
+}
+
+.footer__link {
+  color: $color-text;
+  transition: all 0.15s ease-out;
+
+  &:hover {
+    color: $color-main;
+    border-bottom: 1px solid $color-main;
+  }
+}
+
+.footer__socials {
+  display: flex;
+  column-gap: 26px;
+  align-items: center;
+}
+
+.footer__icon {
+  &:hover {
+    transform: scale(1.1);
+  }
+}
