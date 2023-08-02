@@ -4,16 +4,32 @@
   font-size: 20px;
   line-height: 36px;
   color: $color-text;
+
+  @include mediaTablet {
+    padding: 40px 0;
+  }
 }
 
 .footer__row {
   display: flex;
   justify-content: space-between;
+
+  @include mediaTablet {
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 32px;
+  }
 }
 
 .footer__nav {
   display: flex;
   column-gap: 104px;
+
+  @include mediaTablet {
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: center;
+  }
 }
 
 .footer__link {
@@ -23,6 +39,10 @@
   &:hover {
     color: $color-main;
     border-bottom: 1px solid $color-main;
+  }
+
+  @include mediaTablet {
+    color: $color-email-mobile;
   }
 }
 

@@ -3,8 +3,30 @@
   justify-content: space-between;
 }
 
+.nav__logo {
+  @include mediaMobile {
+    max-width: 109px;
+  }
+}
+
 .nav__list {
   display: flex;
   align-items: center;
   column-gap: 118px;
+
+  @include mediaTablet {
+    column-gap: 60px;
+  }
+
+  @include mediaMobile {
+    display: none;
+  }
+}
+
+.nav__btn {
+  display: none;
+
+  @include mediaMobile {
+    display: block;
+  }
 }

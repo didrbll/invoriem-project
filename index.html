@@ -32,11 +32,15 @@
               <li><a href="#!" class="link">About us</a></li>
               <li><a href="#!" class="btn">Let's Talk</a></li>
             </ul>
+
+            <button class="nav__btn" id="openMobileNav">
+              <img src="./img/header/nav-mobile.svg" alt="open nav" />
+            </button>
           </nav>
         </div>
 
         <div class="header__content">
-          <h1 class="header__title">We build dreams, not just walls</h1>
+          <h1 class="header__title">We build dreams, <br />not just walls</h1>
           <div class="header__text">
             <p>Fulfill your international property developments with us</p>
           </div>
@@ -44,15 +48,28 @@
             <a href="#!" class="btn btn--big">Let's Talk</a>
           </div>
         </div>
+
+        <div class="header__content-mobile">
+          <img
+            src="./img/logo.svg"
+            alt="invoriem logo"
+            class="header__logo-mobile"
+          />
+          <div class="header__text-mobile">
+            <p>We fulfill international property developments</p>
+          </div>
+        </div>
+
+        <a href="#main" class="header__arrow">
+          <img src="./img/header/arrow-down.svg" alt="scroll down" />
+        </a>
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <section class="case-studies">
         <div class="container">
-          <div class="case-studies__title">
-            <h2 class="title">Case Studies</h2>
-          </div>
+          <h2 class="title">Case Studies</h2>
           <div class="case-studies__text text">
             <p>
               We deliver a unique and truly bespoke approach to delivering
@@ -63,38 +80,40 @@
         </div>
 
         <div class="container-right">
-          <div class="slider owl-carousel owl-theme">
-            <div class="slider__item slide">
-              <h3 class="slide__title">France</h3>
-              <img
-                src="./img/slider/slider-01.jpg"
-                alt="France"
-                class="slide__img"
-              />
-            </div>
-            <div class="slider__item slide">
-              <h3 class="slide__title">Morocco</h3>
-              <img
-                src="./img/slider/slider-02.jpg"
-                alt="France"
-                class="slide__img"
-              />
-            </div>
-            <div class="slider__item slide">
-              <h3 class="slide__title">Portugal</h3>
-              <img
-                src="./img/slider/slider-03.jpg"
-                alt="France"
-                class="slide__img"
-              />
-            </div>
-            <div class="slider__item slide">
-              <h3 class="slide__title">London</h3>
-              <img
-                src="./img/slider/slider-04.jpg"
-                alt="France"
-                class="slide__img"
-              />
+          <div class="slider">
+            <div class="owl-carousel owl-theme">
+              <div class="slider__item slide">
+                <h3 class="slide__title">France</h3>
+                <img
+                  src="./img/slider/slider-01.jpg"
+                  alt="France"
+                  class="slide__img"
+                />
+              </div>
+              <div class="slider__item slide">
+                <h3 class="slide__title">Morocco</h3>
+                <img
+                  src="./img/slider/slider-02.jpg"
+                  alt="France"
+                  class="slide__img"
+                />
+              </div>
+              <div class="slider__item slide">
+                <h3 class="slide__title">Portugal</h3>
+                <img
+                  src="./img/slider/slider-03.jpg"
+                  alt="France"
+                  class="slide__img"
+                />
+              </div>
+              <div class="slider__item slide">
+                <h3 class="slide__title">London</h3>
+                <img
+                  src="./img/slider/slider-04.jpg"
+                  alt="France"
+                  class="slide__img"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -102,9 +121,7 @@
 
       <section class="about">
         <div class="container">
-          <div class="about__title">
-            <h2 class="title">We are Invoriem</h2>
-          </div>
+          <h2 class="title">We are Invoriem</h2>
           <div class="about__text text">
             <p>We fulfill international property developments</p>
           </div>
@@ -113,11 +130,15 @@
               <button class="video__btn" id="video-btn">
                 <img src="./img/video/play-icon.svg" alt="play icon" />
               </button>
-              <img
-                src="./img/video/video-img.jpg"
-                alt="video preview"
-                class="video__img"
-              />
+
+              <picture class="video__img">
+                <source
+                  media="(max-width: 600px)"
+                  srcset="./img/video/video-img-mobile.jpg"
+                />
+                <img src="./img/video/video-img.jpg" alt="video preview" />
+              </picture>
+
               <video class="video__obj" id="video-obj" loop>
                 <source src="./img/video/video.mp4" type="video/mp4" />
               </video>
@@ -164,6 +185,67 @@
         </div>
       </div>
     </footer>
+
+    <section class="mobile-nav none" id="mobileNav">
+      <div class="mobile-nav__header">
+        <a href="#!">
+          <img
+            src="./img/logo.svg"
+            alt="invoriem logo"
+            class="mobile-nav__logo"
+          />
+        </a>
+
+        <button class="mobile-nav__btn" id="closeMobileNav">
+          <img src="./img/header/nav-mobile.svg" alt="close nav" />
+        </button>
+      </div>
+
+      <nav class="mobile-list">
+        <ul>
+          <li><a href="#!">Hello</a></li>
+          <li><a href="#!">Bonjour</a></li>
+          <li><a href="#!">Olá</a></li>
+          <li><a href="#!">Marhabaan</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-info">
+        <h4 class="mobile-info__title">Contact us</h4>
+        <div class="mobile-info__contacts">
+          <a href="mailto:info@invoriem.com">info@invoriem.com</a>
+          <a href="tel:+55512345258">+555 1234 52 58</a>
+        </div>
+
+        <address class="mobile-info__address">
+          3517 W. Gray St.<br />
+          Utica, Pennsylvania<br />57867
+        </address>
+      </div>
+
+      <div class="mobile-footer">
+        <a href="mailto:info@invoriem.com" class="mobile-footer__email"
+          >info@invoriem.com</a
+        >
+
+        <div class="mobile-socials">
+          <a href="#!">
+            <img src="./img/socials/instagram-icon.svg" alt="instagram icon" />
+          </a>
+          <a href="#!">
+            <img src="./img/socials/facebook-icon.svg" alt="facebook icon" />
+          </a>
+          <a href="#!">
+            <img src="./img/socials/twitter-icon.svg" alt="twitter icon" />
+          </a>
+          <a href="#!">
+            <img src="./img/socials/linkedIn-icon.svg" alt="linkedIn icon" />
+          </a>
+        </div>
+
+        <p class="mobile-footer__copyright">Copyright © 2020 Invoriem</p>
+      </div>
+    </section>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"

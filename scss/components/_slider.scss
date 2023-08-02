@@ -1,7 +1,29 @@
+.slider {
+  @include mediaLaptop {
+    width: 1900px;
+  }
+
+  @include mediaTablet {
+    width: 1200px;
+  }
+
+  @include mediaMobile {
+    width: 546px;
+  }
+}
+
 .slide {
   position: relative;
   display: inline-block;
   padding-left: 80px;
+
+  @include mediaTablet {
+    padding-left: 38px;
+  }
+
+  @include mediaMobile {
+    padding-left: 33px;
+  }
 }
 
 .slide__title {
@@ -12,6 +34,40 @@
   font-weight: $bold;
 
   background: linear-gradient(90deg, $color-accent 80px, $color-white 80px);
-  -webkit-background-clip: text;
+  background-clip: text;
+  // -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @include mediaTablet {
+    font-size: 80px;
+    bottom: 32px;
+    background: linear-gradient(90deg, $color-accent 33px, $color-white 33px);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @include mediaMobile {
+    font-size: 60px;
+    bottom: 22px;
+    background: linear-gradient(90deg, $color-accent 33px, $color-white 33px);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.slide__img {
+  @include mediaLaptop {
+    width: 504px;
+    height: 594px;
+  }
+
+  @include mediaTablet {
+    width: 336px;
+    height: 396px;
+  }
+
+  @include mediaMobile {
+    width: 224px;
+    height: 264px;
+  }
 }

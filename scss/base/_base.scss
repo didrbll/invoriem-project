@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 @import "./fonts/gilroy/stylesheet.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-main;
   font-weight: $medium;
@@ -11,10 +15,34 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1750px;
+
+  @include mediaLaptop {
+    padding: 0 25px;
+  }
+
+  @include mediaTablet {
+    padding: 0 24px;
+  }
+
+  @include mediaMobile {
+    padding: 0 24px;
+  }
 }
 
 .container-right {
   padding-left: calc((100% - 1750px) / 2 + 15px);
+
+  @include mediaLaptop {
+    padding: 0 25px;
+  }
+
+  @include mediaTablet {
+    padding-left: 24px;
+  }
+
+  @include mediaMobile {
+    padding-left: 24px;
+  }
 }
 
 .link {
@@ -27,16 +55,46 @@ body {
 }
 
 .title {
+  margin-bottom: 12px;
+  max-width: 1070px;
+
   font-size: 80px;
   font-weight: $bold;
+
+  @include mediaTablet {
+    font-size: 50px;
+  }
+
+  @include mediaMobile {
+    font-size: 32px;
+    margin-bottom: 7px;
+  }
 }
 
 .text {
   font-size: 28px;
   line-height: 1.57;
   color: $color-text;
+
+  @include mediaTablet {
+    font-size: 20px;
+  }
+
+  @include mediaMobile {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+  }
 }
 
 .none {
-  display: none;
+  display: none !important;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
